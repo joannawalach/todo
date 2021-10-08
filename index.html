@@ -10,18 +10,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="window_container">
-        <div class="logo">
-            <img src="img/logo.png" alt="logo"
+    <div class="appwindow">
+        <div class="appheader"> TO DO
+            <i class="fa fa-refresh fa-spin fa-1g fa-fw"></i>
         </div>
-        <div class="content">content</div>
-        <div class="inputdiv">
-            <input class="inputfield" id="input1" type="text">
-            <label for="input1">todo</label>
-            <button class="btn">Add</button>
+        <div class="appdialog">
+            <input id="text" type="text" value="input" length="30" maxlength="50">
+            <button id="but" type="button" onclick="newTodo()"> DODAJ </button>
         </div>
-
+        <div class="appbody"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" typ="text/javascript"></script>
 </body>
 </html>
