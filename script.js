@@ -12,16 +12,13 @@ let TodoApp = {
     printTasks: function() {   
         for (let i = 0; i <this.tasks.length; i++) {
         let task = this.tasks[i]
-            console.log(this.task.name[i])
+            console.log(this.tasks[i])
         }
         console.log(this.tasks)
     }
 }
     
-
     TodoApp.add("drink water");
     TodoApp.add("learn Spanish");
     TodoApp.removebyIndex(3);
-
-
     TodoApp.printTasks();
