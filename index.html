@@ -15,10 +15,12 @@
             <i class="fa fa-refresh fa-spin fa-1g fa-fw"></i>
         </div>
         <div class="appdialog">
-            <input id="input" type="text" value="input" length="30" maxlength="50">
-            <button id="but" type="button" onclick="newTodo()"> DODAJ </button>
+            <form id="taskform" class="formtask">
+            <input id="input" type="text" value="input" placeholder="dodaj zadanie" length="30" maxlength="50" required>
+            <button type="submit" id="submit" > DODAJ </button>
         </div>
-        <div class="appbody"></div>
+        <div id="tasksList" class="appbody"></div>
+     </form>
     </div>
     <script src="script.js" typ="text/javascript"></script>
 </body>

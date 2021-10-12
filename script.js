@@ -1,24 +1,29 @@
-let TodoApp = {
-    tasks:[],
-    add: function(name) {
-        this.tasks.push({
-            task: name
-        })
-    },
-    removebyIndex: function(i) {
-        if (i >= this.tasks.length) return;
-        this.tasks.splice(i,0);
-    },
-    printTasks: function() {   
-        for (let i = 0; i <this.tasks.length; i++) {
-        let task = this.tasks[i]
-            console.log(this.tasks[i])
-        }
-        console.log(this.tasks)
-    }
+let btn = document.getElementById("submit");
+btn.addEventListener('click', addTask);
+
+function addTodo(todo) {
+    let targetDiv = document.getElementById("tasksList");
+    let newTask = document.createElement("p");
+    newTask.innerHTML = `
+    <p>${todo} 
+    <button id="buttonedit">edytuj</button>
+    <button id="buttonremove">usuń</button>
+    </p>
+    `;
+    newTask.classList.add('newtask');
+    targetDiv.appendChild(newTask);
 }
-    
-    TodoApp.add("drink water");
-    TodoApp.add("learn Spanish");
-    TodoApp.removebyIndex(3);
-    TodoApp.printTasks();
+
+function addTask(e) {
+    e.preventDefault();
+    let input = document.getElementById("input");
+    addTodo(input.value);
+}
+
+let removeBtn = document.getElementById("buttonremove");
+removeBtn.addEventListener('click', removeTask);
+
+function removeTask(e) {
+    let targetDiv = document.getElementById('tasksList');
+    targetDiv.removeChild(newTask);
+}
