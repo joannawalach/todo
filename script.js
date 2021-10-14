@@ -1,29 +1,26 @@
-let btn = document.getElementById("submit");
-btn.addEventListener('click', addTask);
+let addButton = document.getElementById("addButton");
+addButton.addEventListener("click", function() {
 
-function addTodo(todo) {
-    let targetDiv = document.getElementById("tasksList");
-    let newTask = document.createElement("p");
-    newTask.innerHTML = `
-    <p>${todo} 
-    <button id="buttonedit">edytuj</button>
-    <button id="buttonremove">usuń</button>
-    </p>
-    `;
-    newTask.classList.add('newtask');
-    targetDiv.appendChild(newTask);
-}
+let newActivity = document.getElementById("input").value;
 
-function addTask(e) {
-    e.preventDefault();
-    let input = document.getElementById("input");
-    addTodo(input.value);
-}
+let newDiv = document.createElement("p");
+let text = document.createTextNode(newActivity);
 
-let removeBtn = document.getElementById("buttonremove");
-removeBtn.addEventListener('click', removeTask);
+newDiv.appendChild(text);
 
-function removeTask(e) {
-    let targetDiv = document.getElementById('tasksList');
-    targetDiv.removeChild(newTask);
-}
+let button1 = document.createElement("button");
+newDiv.appendChild(button1);
+button1.innerText = "edit";
+button1.addEventListener("click", function() {
+    let targetDiv = document.getElementsByTagName("div")[3];
+    targetDiv.removeChild(newDiv);
+})
+
+let button2 = document.createElement("button");
+newDiv.appendChild(button2);
+button2.innerText = "remove";
+
+let targetDiv = document.getElementsByTagName("div")[3];
+targetDiv.appendChild(newDiv);
+
+})
