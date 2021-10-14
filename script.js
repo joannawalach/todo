@@ -20,10 +20,11 @@ let button2 = document.createElement("button");
 newDiv.appendChild(button2);
 button2.innerText = "edit";
 button2.addEventListener("click", function() {
-   input.value = newDiv.textContent;
+   input.value = text.textContent;
 })
 
 let targetDiv = document.getElementsByTagName("div")[3];
 targetDiv.appendChild(newDiv);
+input.value="";
 
 })
