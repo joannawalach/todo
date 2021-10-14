@@ -13,13 +13,14 @@ input {
     border: 0px;
     height: 40px;
     width: 60%;
+    padding-left: 30px;
 }
 
 button {
     background-color: rgb(140, 224, 13);
     color: rgb(249, 252, 249);
     border: 0;
-    height: 25px;
+    height: 35px;
     padding-left: 5px 5px;
     text-align: right;
     float: right;
@@ -28,14 +29,15 @@ button {
 
 div {
     background-color: rgb(146, 35, 35);
-    height: 50px;
+    height: 40px;
 }
 
 p {
+    box-sizing: border-box;
     background-color: rgb(252, 252, 252);
     color: rgb(165, 162, 162);
     margin: 1px 0px 0px 0px;
-    height: 60px;
+    height: 40px;
     padding: 0px 0px 0px 20px;
 }
 
